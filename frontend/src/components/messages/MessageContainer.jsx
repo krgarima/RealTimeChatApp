@@ -22,7 +22,7 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* Header */}
-          <div className="bg-slate-500 px-4 py-2 mb-2 flex">
+          <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center">
             <span className="label-text" onClick={() => setShowChat(false)}>
               <FaArrowLeft />
             </span>{" "}
