@@ -16,7 +16,7 @@ const Home = () => {
       </div>
       {/* Mobile screen */}
       <div className="sm:block md:hidden">
-        <div className="flex h-[90%] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+        <div className="flex h-[90%] max-h-[95vh] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
           {showChat ? <MessageContainer /> : <Sidebar />}
         </div>
       </div>
