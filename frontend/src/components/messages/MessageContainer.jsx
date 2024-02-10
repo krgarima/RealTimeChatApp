@@ -27,7 +27,7 @@ const MessageContainer = () => {
               <FaArrowLeft />
             </span>{" "}
             {/* <span className="label-text">To:</span>{" "} */}
-            <div className="w-10 rounded-full">
+            <div className="w-10 rounded-full mx-1">
               <img
                 alt="Profile Picture"
                 src={selectedConversation.profilePic}
