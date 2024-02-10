@@ -22,17 +22,17 @@ const MessageContainer = () => {
       ) : (
         <>
           {/* Header */}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
+          <div className="bg-slate-500 px-4 py-2 mb-2 flex">
             <span className="label-text" onClick={() => setShowChat(false)}>
               <FaArrowLeft />
             </span>{" "}
             {/* <span className="label-text">To:</span>{" "} */}
-            <span className="w-10 rounded-full">
+            <div className="w-10 rounded-full">
               <img
                 alt="Profile Picture"
                 src={selectedConversation.profilePic}
               />
-            </span>
+            </div>
             <span className="text-gray-900 font-bold">
               {selectedConversation.fullName}
             </span>
