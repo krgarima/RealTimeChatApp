@@ -7,8 +7,12 @@ import { useAuthContext } from "../../context/AuthContext";
 import { FaArrowLeft } from "react-icons/fa";
 
 const MessageContainer = () => {
-  const { selectedConversation, setSelectedConversation, setShowChat } =
-    useConversation();
+  const {
+    selectedConversation,
+    setSelectedConversation,
+    showChat,
+    setShowChat,
+  } = useConversation();
 
   useEffect(() => {
     // cleanup function (unmounts)
@@ -16,31 +20,32 @@ const MessageContainer = () => {
   }, [setSelectedConversation]);
 
   return (
-    <div className="md:min-w-[450px] flex flex-col max-h-[100%]">
-      {!selectedConversation ? (
-        <NoChatSelected />
-      ) : (
-        <>
-          {/* Header */}
-          <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center">
-            <span className="label-text" onClick={() => setShowChat(false)}>
-              <FaArrowLeft />
-            </span>{" "}
-            {/* <span className="label-text">To:</span>{" "} */}
-            <div className="w-10 rounded-full mx-1">
-              <img
-                alt="Profile Picture"
-                src={selectedConversation.profilePic}
-              />
+    <div className={`${showChat ? "" : "hidden"} md:block h-full`}>
+      <div className="md:min-w-[450px] flex flex-col h-full">
+        {!selectedConversation ? (
+          <NoChatSelected />
+        ) : (
+          <>
+            {/* Header */}
+            <div className="bg-slate-500 px-4 py-2 mb-2 flex items-center">
+              <span className="label-text" onClick={() => setShowChat(false)}>
+                <FaArrowLeft />
+              </span>{" "}
+              <div className="w-10 rounded-full mx-1">
+                <img
+                  alt="Profile Picture"
+                  src={selectedConversation.profilePic}
+                />
+              </div>
+              <span className="text-gray-900 font-bold">
+                {selectedConversation.fullName}
+              </span>
             </div>
-            <span className="text-gray-900 font-bold">
-              {selectedConversation.fullName}
-            </span>
-          </div>
-          <Messages />
-          <MessageInput />
-        </>
-      )}
+            <Messages />
+            <MessageInput />
+          </>
+        )}
+      </div>
     </div>
   );
 };
