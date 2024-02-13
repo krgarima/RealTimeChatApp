@@ -1,4 +1,3 @@
-Demo: https://www.loom.com/share/4bceda68aed24ccaaf832a8cc104a54f?sid=bab25ec6-a9c4-4bdb-af3b-f42ce0aa6f2c
 
 ![chat2](https://github.com/krgarima/RealTimeChatApp/assets/90110521/0ba0bc15-f4f2-4671-91f3-adc94be63e1c)
 
@@ -35,6 +34,13 @@ npm start
 
 ## Live URL
 You can access the live version of this application [here](https://realtime-chat-l5k7.onrender.com/).
+
+---
+
+https://www.loom.com/share/4bceda68aed24ccaaf832a8cc104a54f?sid=bab25ec6-a9c4-4bdb-af3b-f42ce0aa6f2c
+
+---
+
 
 Feel free to explore the application and enjoy seamless realtime communication!
 
